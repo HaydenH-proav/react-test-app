@@ -7,7 +7,7 @@
       "X-Azure-FDID" : "af17cfa0-eabd-40f8-843f-c59d566c36b4"
     },
     "allowedForwardedHosts": [
-      "my-sitename.azurefd.net"
+      "frontdooruniquehostname-fvb0h3exdyfrbbaf.z01.azurefd.net"
     ]
   }
 
