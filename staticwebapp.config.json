@@ -1,8 +1,23 @@
 {
-        "networking": {
-          "allowedIpRanges": [
-            "61.68.36.0/24"
-          ]
-        }
-
+  "networking": {
+    "allowedIpRanges": ["AzureFrontDoor.Backend"]
+  },
+  "forwardingGateway": {
+    "requiredHeaders": {
+      "X-Azure-FDID" : "0f65e6da-2020-48e1-9cd2-2d6308164ef9"
+    },
+    "allowedForwardedHosts": [
+      "test-site-htf4bngse7cbg2fc.z01.azurefd.net"
+    ]
+    },
+        "route": "/*",
+        "rewrite": "index.html"
+    ,
+    "navigationFallback": {
+        "rewrite": "index.html",
+        "exclude": ["/static/images/*.{png,jpg,gif}", "/static/css/*"]
+    },
+    "mimeTypes": {
+        ".json": "text/json"
+    }
 }
